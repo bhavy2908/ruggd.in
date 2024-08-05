@@ -17,7 +17,7 @@ vars
   --carousel-3d-perspective: 1000px;
   --carousel-3d-perspective-origin: 50% 20%;
   --carousel-control-button-width: 1rem;
-  --carousel-control-button-height: 10vh;
+  --carousel-control-button-height: 0vh;
   --carousel-control-color-rgb: 255, 255, 255, 0;
   --carousel-animation-duration: 35s;
   --carousel-animation-play-state: running;
