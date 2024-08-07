@@ -9,12 +9,12 @@
   --carousel-bg-color-rgb: 0, 0, 0;
 }
 
-.container-box{
+.container-box {
   display: flex;
   flex-direction: row;
 }
 
-.heading-box{
+.heading-box {
   float: right;
   width: 40%;
   position: absolute;
@@ -191,7 +191,6 @@
   }
 }
 
-
 :root {
   --headingSize: 65px;
   --background-color: transparent; /* Changed from black to transparent */
@@ -203,7 +202,7 @@
   color: white;
   position: absolute;
   margin-left: 40%;
-  margin-top: 30VH;
+  margin-top: 30vh;
   text-align: right;
 }
 
@@ -215,15 +214,14 @@ h1 {
   margin-bottom: -6vh;
   top: 100px;
   opacity: 0;
-  animation: 
-    .5s swift-up ease-in-out forwards,
+  animation: 0.5s swift-up ease-in-out forwards,
     4.5s fade-in ease-in-out forwards;
 }
 
 span {
   display: inline-block;
   overflow: hidden;
-  animation: .3s swift-up ease-in-out forwards;	
+  animation: 0.3s swift-up ease-in-out forwards;
 }
 
 i {
@@ -231,9 +229,55 @@ i {
   position: relative;
   top: var(--headingSize);
   opacity: 0; /* Start with opacity 0 */
-  animation: 
-    .5s swift-up ease-in-out forwards,
+  animation: 0.5s swift-up ease-in-out forwards,
     4.5s fade-in ease-in-out forwards;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: auto;
+    margin: 0 10%;
+  }
+
+  :root {
+    --headingSize: 35px;
+  }
+}
+
+.shop-now-btn {
+  margin-top: 20vh;
+  font-size: 1.4rem;
+  font-weight: 600;
+  animation: 0.5s swift-up ease-in-out forwards,
+    4.5s fade-in ease-in-out forwards, animate 2s infinite;
+
+  padding: 0.6rem 1rem 0rem 1rem;
+  border-radius: 4px;
+  color: #787777;
+  /* border: 1px solid #186F65; */
+  text-transform: uppercase;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(255, 255, 255, 0.3) 30%,
+    #fff 50%,
+    rgba(255, 255, 255, 0.3) 70%
+  );
+  -webkit-mask-size: 200%;
+}
+
+.shop-now-btn:hover {
+  color: #186f65;
+}
+
+@keyframes animate {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
 }
 
 @keyframes swift-up {
@@ -252,34 +296,4 @@ i {
   to {
     opacity: 1;
   }
-}
-
-@media screen and (max-width: 1000px) {
-  .container {
-    width: auto;
-    margin: 0 10%;
-  }
-  
-  :root {
-    --headingSize: 35px;
-  }
-}
-
-.shop-now-btn{
-  margin-top: 20vh;
-  font-size: 1.4rem;
-  font-weight: 600;
-  animation: 
-    .5s swift-up ease-in-out forwards,
-    4.5s fade-in ease-in-out forwards;
-  
-  padding: 0.6rem 1rem 0rem 1rem;
-  border-radius: 4px;
-  color: #555555;
-  /* border: 1px solid #186F65; */
-  text-transform: uppercase;
-}
-
-.shop-now-btn:hover{
-  color: #186F65;
 }

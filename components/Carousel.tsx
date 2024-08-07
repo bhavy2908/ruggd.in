@@ -5,40 +5,40 @@ import "../assets/Carousel.css";
 const CarouselComponent: React.FC = () => {
   const carouselItems = [
     {
-      src: "http://static.superiorwallpapers.com/images/lthumbs/2016-03/11645_Elephant-runing-in-the-jungle-HD-wild-animal-wallpaper.jpg",
-      alt: "Elephant running in the jungle",
+      src: "https://5.imimg.com/data5/SELLER/Default/2023/5/305639688/VA/II/TR/68642660/versace-luxury-rug-500x500.jpg",
+      alt: "Versace luxury rug",
     },
     {
-      src: "http://static.superiorwallpapers.com/images/lthumbs/2016-03/11645_Elephant-runing-in-the-jungle-HD-wild-animal-wallpaper.jpg",
-      alt: "Elephant running in the jungle",
+      src: "https://media.karousell.com/media/photos/products/2021/5/20/formula_1_wool_rug_thick_pile_1621476763_723a3767_progressive.jpg",
+      alt: "Formula 1 wool rug",
     },
     {
-      src: "http://static.superiorwallpapers.com/images/lthumbs/2016-03/11645_Elephant-runing-in-the-jungle-HD-wild-animal-wallpaper.jpg",
-      alt: "Elephant running in the jungle",
+      src: "https://5.imimg.com/data5/SELLER/Default/2023/9/344842391/OW/AY/XG/87155868/rfgtht-500x500.jpg",
+      alt: "Colorful abstract rug",
     },
     {
-      src: "http://static.superiorwallpapers.com/images/lthumbs/2016-03/11645_Elephant-runing-in-the-jungle-HD-wild-animal-wallpaper.jpg",
-      alt: "Elephant running in the jungle",
+      src: "https://letsrug.in/cdn/shop/files/014E4F37-FB2C-4C1E-A005-A2FBE026D6EF.png?v=1695576857&width=416",
+      alt: "Geometric pattern rug",
     },
     {
-      src: "http://static.superiorwallpapers.com/images/lthumbs/2016-03/11645_Elephant-runing-in-the-jungle-HD-wild-animal-wallpaper.jpg",
-      alt: "Elephant running in the jungle",
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe1AkAcOzKFrnPOrcIqj9AlGgzmogVMN1OhA&s",
+      alt: "Circular pattern rug",
     },
     {
-      src: "http://static.superiorwallpapers.com/images/lthumbs/2016-03/11645_Elephant-runing-in-the-jungle-HD-wild-animal-wallpaper.jpg",
-      alt: "Elephant running in the jungle",
+      src: "https://i.etsystatic.com/33539386/r/il/a127ec/4123396508/il_fullxfull.4123396508_i0jr.jpg",
+      alt: "Vintage style rug",
     },
     {
-      src: "http://static.superiorwallpapers.com/images/lthumbs/2016-03/11645_Elephant-runing-in-the-jungle-HD-wild-animal-wallpaper.jpg",
-      alt: "Elephant running in the jungle",
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGttiFqHhETyzBwECFStbCL1GsVCLWI3PmNg&s",
+      alt: "Modern abstract rug",
     },
     {
-      src: "http://static.superiorwallpapers.com/images/lthumbs/2016-03/11645_Elephant-runing-in-the-jungle-HD-wild-animal-wallpaper.jpg",
-      alt: "Elephant running in the jungle",
+      src: "https://m.media-amazon.com/images/I/71qKIhTTRJS._AC_UF894,1000_QL80_.jpg",
+      alt: "Bohemian style rug",
     },
     {
-      src: "http://static.superiorwallpapers.com/images/lthumbs/2016-03/11645_Elephant-runing-in-the-jungle-HD-wild-animal-wallpaper.jpg",
-      alt: "Elephant running in the jungle",
+      src: "https://www.travelsintranslation.com/wp-content/uploads/2021/07/Punk-Rock-Stars-Social-Distortion-Band-Area-Rug-Music-CV60024-Rug-Carpet.jpg",
+      alt: "Punk rock band rug",
     },
   ];
 
@@ -88,10 +88,10 @@ const CarouselComponent: React.FC = () => {
         <h1 className="swift-up-text" style={{ color: "#186F65" }}>
           elegance
         </h1>
-        <h1 className="swift-up-text">
-          underfoot.
-        </h1>
-        <button className="swift-up-text shop-now-btn">Discover Now</button>
+        <h1 className="swift-up-text">underfoot.</h1>
+        <button className="swift-up-text shop-now-btn shine">
+          Discover Now
+        </button>
       </section>
     </div>
   );
