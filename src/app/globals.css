@@ -43,6 +43,7 @@ html {
   font-weight: 800;
   gap: 8vw;
   margin-bottom: 100px;
+  margin-top: 100vh;
 }
 
 @layer utilities {

@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import React, { useState, useEffect } from "react";
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
-import "../assets/NavBar.css"
+import "../assets/NavBar.css";
 
 const Navbar: React.FC = () => {
   const [isAffix, setIsAffix] = useState(false);
@@ -36,19 +36,20 @@ const Navbar: React.FC = () => {
         >
           <ul className="navlinks">
             <li>
-              <a href="/shop">Shop</a>
+              <a href="">Shop</a>
             </li>
             <li>
-              <a href="/categories">Categories</a>
+              <a href="">Custom Rugs</a>
             </li>
             <li>
-              <a href="/deals">Deals</a>
+              <a href="">Sign In</a>
             </li>
             <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
+              <div id="cart-indicator">
+                <button type="button">
+                  <div className="item-count"><a>0</a></div>
+                </button>
+              </div>
             </li>
           </ul>
         </div>
