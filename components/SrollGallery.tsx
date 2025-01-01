@@ -31,16 +31,9 @@ const ImageGallery: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const images = [
-    "https://5.imimg.com/data5/SELLER/Default/2023/5/305639688/VA/II/TR/68642660/versace-luxury-rug-500x500.jpg",
-    "https://media.karousell.com/media/photos/products/2021/5/20/formula_1_wool_rug_thick_pile_1621476763_723a3767_progressive.jpg",
-    "https://5.imimg.com/data5/SELLER/Default/2023/9/344842391/OW/AY/XG/87155868/rfgtht-500x500.jpg",
-    "https://letsrug.in/cdn/shop/files/014E4F37-FB2C-4C1E-A005-A2FBE026D6EF.png?v=1695576857&width=416",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe1AkAcOzKFrnPOrcIqj9AlGgzmogVMN1OhA&s",
-    "https://i.etsystatic.com/33539386/r/il/a127ec/4123396508/il_fullxfull.4123396508_i0jr.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGttiFqHhETyzBwECFStbCL1GsVCLWI3PmNg&s",
-    "https://m.media-amazon.com/images/I/71qKIhTTRJS._AC_UF894,1000_QL80_.jpg",
-  ];
+  const imageUrl =
+    "https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2021/07/12215626/Rick-Astley-Rickroll-featured.jpg";
+  const images = Array(8).fill(imageUrl);
 
   const getRowStyle = (rowIndex: number) => {
     const scale = 1 + (1 - progress) * 2;
@@ -113,7 +106,7 @@ const ImageGallery: React.FC = () => {
           justify-content: space-between;
           height: 50%;
           gap: 35px;
-          margin-bottom: -10px;
+          margin-bottom: -10px
         }
         .image-container {
           flex: 1;

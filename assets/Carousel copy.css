@@ -1,0 +1,159 @@
+:root {
+  --carousel-transition-duration: 350ms;
+  --carousel-transition-ease: ease-out;
+  --carousel-bg-color-rgb: 0, 0, 0;
+  --carousel-shadow-color-rgb: 128, 128, 128;
+  --carousel-item-width: 12vw;
+  --carousel-item-height: 16vw;
+  --carousel-item-hover-effect: 1.075;
+  --carousel-item-reflection-blur: 0.25rem;
+  --carousel-item-empty-color-rgb: 255, 255, 255;
+  --carousel-item-glow-color-rgb: 255, 255, 255;
+  --carousel-item-glow-size: 5rem;
+  --carousel-diameter: 30vw;
+  --carousel-3d-perspective: 500px;
+  --carousel-3d-perspective-origin: 50% 20%;
+  --carousel-control-color-rgb: 255, 255, 255;
+  --carousel-animation-duration: 35s;
+}
+
+.carousel {
+  --_diameter: var(--carousel-diameter);
+  --_radius: calc(var(--_diameter) / 2);
+  --_item-width: var(--carousel-item-width);
+  --_item-height: var(--carousel-item-height);
+  perspective: var(--carousel-3d-perspective);
+  perspective-origin: var(--carousel-3d-perspective-origin);
+  width: 50vw;
+  height: var(--_diameter);
+  margin-left: 5vw;
+  margin-top: 7vw;
+  position: relative;
+}
+
+.carousel-control {
+  z-index: 1;
+  background-color: rgba(var(--carousel-control-color-rgb), 0.5);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  color: white;
+}
+
+.carousel-control.left {
+  left: 10px;
+}
+
+.carousel-control.right {
+  right: 10px;
+}
+
+.carousel .carousel-rotation-direction {
+  transform: translateZ(calc(var(--_radius) * -1));
+  transform-style: preserve-3d;
+  transition: transform var(--carousel-transition-duration) var(--carousel-transition-ease);
+}
+
+.carousel .carousel-item-wrapper {
+  transform-style: preserve-3d;
+  width: inherit;
+  height: inherit;
+  list-style-type: none;
+  position: relative;
+  animation: carousel-rotation-normal var(--carousel-animation-duration) linear infinite;
+}
+
+@keyframes carousel-rotation-normal {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+.carousel .carousel-item {
+  --_width: var(--_item-width);
+  --_height: var(--_item-height);
+  --_rotation: calc(360deg / var(--_num-elements, 11) * var(--_index));
+  position: absolute;
+  left: calc(50% - var(--_width) / 2);
+  top: calc(50% - var(--_height) / 2);
+  transform: rotateY(var(--_rotation)) translateZ(var(--_radius));
+  width: var(--_width);
+  height: var(--_height);
+  transition: transform var(--carousel-transition-duration) var(--carousel-transition-ease);
+}
+
+.carousel .carousel-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: var(--_image-url);
+  background-size: cover;
+  background-position: center;
+  transition: filter var(--carousel-transition-duration) var(--carousel-transition-ease);
+}
+
+.carousel .carousel-item:hover {
+  transform: rotateY(var(--_rotation)) translateZ(calc(var(--_radius) * var(--carousel-item-hover-effect)));
+}
+
+.carousel .carousel-item:hover a {
+  filter: brightness(1.2);
+}
+
+.carousel .carousel-ground {
+  position: absolute;
+  width: var(--_diameter);
+  height: var(--_diameter);
+  left: calc(50% - var(--_diameter) / 2);
+  top: calc(50% - var(--_diameter) / 2);
+  transform: rotateX(90deg) translateZ(calc(var(--_item-height) / -2));
+  border-radius: 50%;
+  background: radial-gradient(
+    rgba(var(--carousel-shadow-color-rgb), 0.5) 0%,
+    rgba(var(--carousel-bg-color-rgb), 0) 60%
+  );
+}
+
+.lamp-img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20%;
+}
+
+.lamp-img img {
+  width: 50%;
+  height: auto;
+}
+
+@media only screen and (max-width: 64rem) {
+  :root {
+    --carousel-diameter: 40vw;
+    --carousel-item-width: 15vw;
+    --carousel-item-height: 20vw;
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+  :root {
+    --carousel-diameter: 50vw;
+    --carousel-item-width: 18vw;
+    --carousel-item-height: 24vw;
+  }
+  .carousel {
+    margin-top: 15vw;
+  }
+}
+
+@media only screen and (max-width: 32rem) {
+  :root {
+    --carousel-diameter: 60vw;
+    --carousel-item-width: 22vw;
+    --carousel-item-height: 30vw;
+  }
+  .carousel {
+    margin-top: 20vw;
+  }
+}

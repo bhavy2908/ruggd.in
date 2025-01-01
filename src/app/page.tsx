@@ -9,9 +9,11 @@ export default function Home() {
     <div>
       <SmoothScroll />
       <Navbar />
-      <CarouselComponent />
+      <div className="flex">
+        <CarouselComponent />
+      </div>
 
-      <ProductsSection />
+      <ProductsSection/>
       <ImageGallery />
     </div>
   );
